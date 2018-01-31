@@ -4,7 +4,7 @@
   "description": "All I need to start my next vuejs/vuex app",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server"
+    "start": "webpack-dev-server"
   },
   "keywords": ["vuejs", "vuex"],
   "author": "Florent DUVEAU",

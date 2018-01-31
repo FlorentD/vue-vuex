@@ -1,12 +1,28 @@
 <template>
-    <p>{{ greeting }} world</p>
+    <div>
+    <p>{{greeting}} world</p>
+        <button v-on:click="handleClick">CLICK ME</button>
+    <sub-comp/>
+    </div>
 </template>
 <script>
+import SubComp from './SubComp.vue';
 export default {
-  data: function() {
-    return {
-      greeting: 'hello',
-    };
+  data: () => ({
+    greeting: 'hello',
+  }),
+  components: {
+    SubComp,
+  },
+  methods: {
+    handleClick: function() {
+      this.greeting = 'click';
+    },
+  },
+  watch: {
+    greeting: function() {
+      console.log('greeting data has changed !');
+    },
   },
 };
 </script>
