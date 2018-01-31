@@ -1,0 +1,30 @@
+{
+  "name": "vuejs-vuex",
+  "version": "1.0.0",
+  "description": "All I need to start my next vuejs/vuex app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server"
+  },
+  "keywords": ["vuejs", "vuex"],
+  "author": "Florent DUVEAU",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "2.5.13",
+    "vuex": "3.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-env": "2.4.1",
+    "babel-loader": "7.1.2",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "css-loader": "0.28.9",
+    "prettier": "1.10.2",
+    "style-loader": "0.20.1",
+    "vue-loader": "14.0.2",
+    "vue-template-compiler": "2.5.13",
+    "webpack": "3.10.0",
+    "webpack-dev-server": "2.11.1",
+    "webpack-livereload-plugin": "1.0.0"
+  }
+}
