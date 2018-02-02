@@ -19,6 +19,9 @@ export default {
   data: () => ({
     title: 'Sub Title',
   }),
+  watch: {
+    count: () => console.log('count is incrementing'),
+  },
 };
 </script>
 
