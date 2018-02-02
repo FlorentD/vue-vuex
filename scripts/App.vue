@@ -7,7 +7,9 @@
 </template>
 <script>
 import SubComp from './SubComp.vue';
+import store from './store';
 export default {
+  store,
   data: () => ({
     greeting: 'hello',
   }),
