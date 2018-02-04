@@ -1,8 +1,9 @@
 <template>
     <div>
-    <p>{{greeting}} world</p>
-        <button v-on:click="handleClick">CLICK ME</button>
-    <sub-comp/>
+        <p>{{greeting}} world</p>
+        <router-link to="routing"><button v-on:click="handleClick">CLICK ME</button></router-link>
+        <sub-comp/>
+        <router-view></router-view>
     </div>
 </template>
 <script>
@@ -12,6 +13,7 @@ export default {
   store,
   data: () => ({
     greeting: 'hello',
+    message: 'hallo',
   }),
   components: {
     SubComp,

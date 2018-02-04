@@ -1,4 +1,6 @@
 import Vue from 'vue';
 import App from './App.vue';
 
-new Vue(App).$mount('#app');
+import router from './router';
+
+new Vue({ router, ...App }).$mount('#app');
