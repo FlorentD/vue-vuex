@@ -2,6 +2,7 @@
     <div>
         <p>{{greeting}} world</p>
         <router-link to="routing"><button v-on:click="handleClick">CLICK ME</button></router-link>
+        <router-link to="form"><button v-on:click="handleClick">SHOW FORM</button></router-link>
         <sub-comp/>
         <router-view></router-view>
     </div>
