@@ -1,13 +1,13 @@
 {
   "presets": [
-    [
-      "env",
-      {
-        "targets": {
-          "chrome": 52
-        }
-      }
-    ]
+    "env",
+    "react",
+    "stage-0"
   ],
-  "plugins": ["transform-object-rest-spread"]
+  "plugins": [
+    "transform-class-properties",
+    "transform-decorators",
+    "transform-react-constant-elements",
+    "transform-react-inline-elements"
+  ]
 }

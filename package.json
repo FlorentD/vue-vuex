@@ -7,14 +7,13 @@
     "start": "webpack-dev-server",
     "predist": "rm -fr dist && mkdir dist && mkdir dist/js",
     "prettier": "prettier --single-quote --trailing-comma es5 --write",
-    "dist": "webpack --config webpack.prod.config.js --progress --colors && npm run dist:min && npm run dist:html",
+    "dist":
+      "webpack --config webpack.prod.config.js --progress --colors && npm run dist:min && npm run dist:html",
     "dist:min": "minify dist/js/ --out-dir dist/js/",
-    "dist:html": "htmlprocessor ./index.html -o dist/index.html"
+    "dist:html": "htmlprocessor ./index.html -o dist/index.html",
+    "test": "jest --config jest.config.json"
   },
-  "keywords": [
-    "vuejs",
-    "vuex"
-  ],
+  "keywords": ["vuejs", "vuex"],
   "author": "Florent DUVEAU",
   "license": "ISC",
   "dependencies": {
@@ -24,17 +23,22 @@
     "vuex": "3.0.1"
   },
   "devDependencies": {
+    "@vue/test-utils": "1.0.0-beta.11",
     "babel-core": "6.26.0",
     "babel-env": "2.4.1",
+    "babel-jest": "22.2.2",
     "babel-loader": "7.1.2",
     "babel-minify": "0.3.0",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "css-loader": "0.28.9",
     "extract-text-webpack-plugin": "3.0.2",
     "htmlprocessor": "0.2.6",
+    "jest": "22.2.2",
     "prettier": "1.10.2",
+    "regenerator-runtime": "0.11.1",
     "restify": "6.3.4",
     "style-loader": "0.20.1",
+    "vue-jest": "2.1.0",
     "vue-loader": "14.1.1",
     "vue-template-compiler": "2.5.13",
     "webpack": "3.11.0",
