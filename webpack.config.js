@@ -1,8 +1,8 @@
-const webpack = require('webpack');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
   entry: ['./scripts/index.js'],
+  mode: 'development',
   output: {
     path: __dirname,
     filename: 'bundle.js',
@@ -30,5 +30,5 @@ module.exports = {
       vue$: 'vue/dist/vue.esm.js',
     },
   },
-  plugins: [new LiveReloadPlugin(), new webpack.NoEmitOnErrorsPlugin()],
+  plugins: [new LiveReloadPlugin()],
 };
