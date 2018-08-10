@@ -1,4 +1,5 @@
 const LiveReloadPlugin = require('webpack-livereload-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
   entry: ['./scripts/index.js'],
@@ -11,17 +12,20 @@ module.exports = {
   devtool: 'inline-source-map',
   module: {
     rules: [
-      { test: /\.(js)$/, exclude: /node_modules/, use: 'babel-loader' },
+      {
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        use: 'babel-loader',
+      },
       {
         test: /\.(vue)$/,
         exclude: /node_modules/,
         loader: 'vue-loader',
-        options: {
-          loaders: {
-            js: 'babel-loader',
-            css: 'style-loader!css-loader',
-          },
-        },
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loader: 'vue-style-loader!style-loader!css-loader',
       },
     ],
   },
@@ -30,5 +34,5 @@ module.exports = {
       vue$: 'vue/dist/vue.esm.js',
     },
   },
-  plugins: [new LiveReloadPlugin()],
+  plugins: [new LiveReloadPlugin(), new VueLoaderPlugin()],
 };
