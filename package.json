@@ -4,13 +4,13 @@
   "description": "All I need to start my next vuejs/vuex app",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "node server.js",
+    "dev": "webpack-dev-server",
     "predist": "rm -fr dist && mkdir dist && mkdir dist/js",
     "prettier": "prettier --single-quote --trailing-comma es5 --write",
     "dist": "webpack --config webpack.prod.config.js --progress --colors && npm run dist:html",
     "dist:html": "htmlprocessor ./index.html -o dist/index.html",
-    "test": "jest --config jest.config.json",
-    "prod": "node server.js"
+    "test": "jest --config jest.config.json"
   },
   "keywords": [
     "vuejs",
