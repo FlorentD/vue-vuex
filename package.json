@@ -9,7 +9,8 @@
     "prettier": "prettier --single-quote --trailing-comma es5 --write",
     "dist": "webpack --config webpack.prod.config.js --progress --colors && npm run dist:html",
     "dist:html": "htmlprocessor ./index.html -o dist/index.html",
-    "test": "jest --config jest.config.json"
+    "test": "jest --config jest.config.json",
+    "prod": "node server.js"
   },
   "keywords": [
     "vuejs",
