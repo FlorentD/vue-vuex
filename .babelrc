@@ -1,13 +1,16 @@
 {
   "presets": [
-    "env",
-    "react",
-    "stage-0"
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "chrome": 68
+        }
+      }
+    ]
   ],
   "plugins": [
-    "transform-class-properties",
-    "transform-decorators",
-    "transform-react-constant-elements",
-    "transform-react-inline-elements"
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-object-rest-spread"
   ]
 }
