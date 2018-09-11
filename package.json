@@ -10,6 +10,7 @@
     "prettier": "prettier --single-quote --trailing-comma es5 --write",
     "dist": "webpack --config webpack.prod.config.js --progress --colors && npm run dist:html",
     "dist:html": "htmlprocessor ./index.html -o dist/index.html",
+    "deploy": "npm run test && npm run dist && git push heroku master",
     "test": "jest --config jest.config.json"
   },
   "keywords": [
